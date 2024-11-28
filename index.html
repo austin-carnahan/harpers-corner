@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- The <meta> tag specifies the character set used and ensures proper rendering on mobile devices -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- The <title> tag defines the title displayed in the browser tab -->
+    <title>Harper's Corner</title>
+    
+    <!-- Linking to an external stylesheet (styles.css) for page styling -->
+    <!-- Stylesheets are included in the <head> to ensure the page is styled before it's displayed -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- The main header for the website -->
+    <header>
+        <h1>Harper's Corner</h1>
+    </header>
+
+    <!-- Main content area -->
+    <main>
+        <!-- Introduction to the website -->
+        <p>Welcome to Harper's Programming Corner! Boop! Build some stuff and mess around! pbbbft!</p>
+
+        <!-- Explore More Section -->
+        <div class="content-section" id="explore-more-section">
+            <h2>Explore More!</h2>
+        
+            <!-- Text Entry Feature -->
+            <!-- Allows users to input text and see it displayed dynamically -->
+            <div id="text-entry-feature">
+                <h3>Text Entry</h3>
+                <p>Type something and see it added below:</p>
+                <input type="text" id="text-input" placeholder="Type here...">
+                <button id="emoji-button">😊</button> <!-- Emoji picker trigger -->
+                <emoji-picker id="emoji-picker" style="display: none;"></emoji-picker>
+                <button id="submit-text">Submit</button>
+                <div id="text-display"></div>
+            </div>
+        
+            <!-- Background Color Feature -->
+            <!-- Demonstrates interactivity by letting users change the page background -->
+            <div id="background-color-feature">
+                <h3>Change Background Color</h3>
+                <p>Enter a hex color code (e.g., #ff5733) to change the background:</p>
+                <input type="text" id="color-input" placeholder="#000000">
+                <button id="change-color">Change Color</button>
+                <p>Not sure about hex codes? Try this <a href="https://www.color-hex.com/" target="_blank">Hex Color Picker</a>.</p>
+                <button id="random-color">Pick Random Color</button>
+            </div>
+        </div>
+        
+        <!-- Random Dog Pictures Section -->
+        <!-- Integrates an external API to fetch and display random dog pictures -->
+        <div class="content-section" id="dog-section">
+            <h2>Random Dog Pictures</h2>
+            <img id="dog-image" src="" alt="Random Dog" style="max-width: 100%; height: auto; border: 1px solid #ddd; margin-bottom: 10px;">
+            <br>
+            <button id="fetch-dog-button">Fetch a New Dog</button>
+        </div>
+
+        <!-- Volcanoes Map Section -->
+        <!-- Displays a map using Google Maps API and overlays markers for volcanoes -->
+        <div class="content-section">
+            <h2>Volcanoes of the World Map</h2>
+            <p>Click on the markers to learn more about volcanoes from around the world!</p>
+            <div id="map" style="height: 500px; width: 100%; border: 1px solid #ddd;"></div>
+        </div>
+
+        <!-- Today in History Section -->
+        <!-- Uses the Wikipedia API to fetch and display historical events for the current date -->
+        <div class="content-section" id="history-section">
+            <h2>Today in History</h2>
+            <!-- Calendar Image -->
+            <img src="assets/calendar.png" alt="Today in History Calendar" class="history-calendar-image">
+            <p id="today-date"></p>
+            <div id="history-event">
+                <h3 id="event-title">Loading...</h3>
+                <p id="event-summary"></p>
+            </div>
+            <button id="refresh-history">Get Another Event</button>
+        </div>
+
+        <!-- Bug Run Game Section -->
+        <!-- Introduces a link to an external game page -->
+        <div class="content-section" id="bug-run-section">
+            <h2>Bug Run Game</h2>
+            <p>Test your timing and strategy in Bug Run, a game inspired by the classic Frogger. Cross obstacles to reach your goal!</p>
+            <!-- Container for demo image and button -->
+            <div class="bug-run-container">
+                <img src="assets/bugrun.png" alt="Bug Run Game Demo" class="bug-run-demo">
+                <a href="bugrun/index.html" target="_blank" class="bug-run-button">Play Bug Run</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- JavaScript Section -->
+    <!-- Scripts are placed at the end of the body to ensure the page is fully loaded before execution -->
+    <!-- This is important for scripts that interact with the DOM or other elements on the page -->    
+
+    <script type="module" src="https://cdn.jsdelivr.net/npm/emoji-picker-element@^1/index.js"></script>
+
+    <!-- Explore More Section Scripts -->
+    <script src="scripts/exploreMore.js"></script>
+    
+    <!-- Wikipedia API Script -->
+    <script src="scripts/wikipedia.js"></script>
+    
+    <!-- Random Dog API Script -->
+    <script src="scripts/dogs.js"></script>
+    
+    <!-- Google Maps Boilerplate -->
+    <!-- This script is used to load the Google Maps API. It is complex boilerplate code provided by Google. -->
+    <!-- Avoid spending too much time deciphering this part; just use it to initialize Google Maps functionality. -->
+    <script>
+        (g => {
+            var h, a, k, p = "The Google Maps JavaScript API", c = "google", l = "importLibrary", q = "__ib__", m = document, b = window;
+            b = b[c] || (b[c] = {});
+            var d = b.maps || (b.maps = {}), r = new Set, e = new URLSearchParams, u = () => h || (h = new Promise(async (f, n) => {
+                await (a = m.createElement("script"));
+                e.set("libraries", [...r] + "");
+                for (k in g) e.set(k.replace(/[A-Z]/g, t => "_" + t[0].toLowerCase()), g[k]);
+                e.set("callback", c + ".maps." + q);
+                a.src = `https://maps.${c}apis.com/maps/api/js?` + e;
+                d[q] = f;
+                a.onerror = () => h = n(Error(p + " could not load."));
+                a.nonce = m.querySelector("script[nonce]")?.nonce || "";
+                m.head.append(a);
+            }));
+            d[l] ? console.warn(p + " only loads once. Ignoring:", g) : d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n))
+        })({
+            key: "AIzaSyDVvLK418L262Ww_lPXPvcQTmT3gtuJmDk",
+            v: "weekly"
+        });
+    </script>
+    
+    <!-- Map.js Script -->
+    <script src="scripts/map.js"></script>
+</body>
+</html>

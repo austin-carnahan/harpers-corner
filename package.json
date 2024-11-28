@@ -1,0 +1,17 @@
+{
+  "name": "harpers-corner",
+  "version": "1.0.0",
+  "description": "Harper's website",
+  "main": "index.js",
+  "scripts": {
+    "start": "live-server"
+  },
+  "author": "Harper Carnahan",
+  "license": "ISC",
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "live-server": "^1.2.2"
+  },
+  "dependencies": {
+  }
+}
