@@ -2,7 +2,12 @@
 
 Welcome to Harper's Corner! This is a basic webpage to help introduce programming concepts using HTML, CSS, and JavaScript. This guide will explain how to download necessary tools, run the project locally, and explore how each part of the code works.
 
+---
+
 ## Table of Contents
+- [Getting Started with Web Programming](#getting-started-with-web-programming)
+  - [W3Schools Tutorials](#w3schools-tutorials)
+  - [LC101: Introduction to Programming](#lc101-introduction-to-programming)
 - [Installation](#installation)
   - [Step 1: Install Node.js and npm](#step-1-install-nodejs-and-npm)
   - [Step 2: Install Packages](#step-2-install-packages)
@@ -15,6 +20,34 @@ Welcome to Harper's Corner! This is a basic webpage to help introduce programmin
 - [Using Chrome Developer Tools](#using-chrome-developer-tools)
   - [Exploring HTML, CSS, and JavaScript](#exploring-html-css-and-javascript)
   - [Helpful Guides and Videos](#helpful-guides-and-videos)
+- [Experiment and Learn](#experiment-and-learn)
+- [More Learning Resources](#more-learning-resources)
+
+---
+
+## Getting Started with Web Programming
+
+Here are two excellent resources for learning the basics of web programming. These can serve as a foundation for understanding the Harper's Corner project and beyond.
+
+### W3Schools Tutorials
+
+- **Description**: W3Schools offers free, beginner-friendly tutorials on HTML, CSS, and JavaScript. Each tutorial includes explanations, examples, and interactive "Try it Yourself" editors to practice directly in the browser.
+- **How to Use**:
+  1. Start with the [HTML Tutorial](https://www.w3schools.com/html/) to learn how to structure web pages.
+  2. Move on to the [CSS Tutorial](https://www.w3schools.com/css/) to style your pages.
+  3. Finally, explore the [JavaScript Tutorial](https://www.w3schools.com/js/) to add interactivity.
+- **Link**: [W3Schools Website](https://www.w3schools.com/)
+
+---
+
+### LC101: Introduction to Programming by LaunchCode
+
+- **Description**: LC101 is a free, self-paced course from LaunchCode that introduces fundamental programming concepts. It covers HTML, CSS, JavaScript, and more while encouraging problem-solving and hands-on practice.
+- **How to Use**:
+  1. Follow the lessons sequentially to build foundational skills.
+  2. Work on the provided exercises to apply what you've learned.
+  3. Use it alongside this project to reinforce your knowledge.
+- **Link**: [LC101: Introduction to Programming](https://www.launchcode.org/lc101)
 
 ---
 
@@ -47,7 +80,7 @@ To run the webpage on a local server, use the following command in your terminal
 ```bash
 npm start
 ```
-Then, open a web browser and go to `http://localhost:3000` to view the page.
+Then, open a web browser and go to `http://localhost:8080` to view the page.
 
 ---
 
